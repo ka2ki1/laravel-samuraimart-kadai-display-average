@@ -187,3 +187,32 @@ body {
 th, td {
     background-color: #f8fafc !important;
   }
+
+  .samuraimart-star-rating {
+    /* font-size: 20px; */
+    position: relative;
+    display: inline-block;
+    z-index: 0;
+    color: #ffd700;
+    white-space: nowrap;
+}
+
+.samuraimart-star-rating::before {
+    content: "★★★★★"; /* 背面の星を表示 */
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    color: #ccc; /* 背面の星の色を指定 */
+}
+
+.samuraimart-star-rating::after {
+    content: "★★★★★"; /* 前面の星を表示 */
+    position: absolute;
+    z-index: 1;
+    white-space: nowrap;
+    top: 0;
+    left: 0;
+    color: #ffd700; /* 前面の星の色を指定 */
+    /* width: calc({{ $product->averageRating }} * 20%); 平均評価に応じて星の幅を指定 */
+    overflow: hidden; /* 指定した幅よりも大きい部分を非表示にする */
+}

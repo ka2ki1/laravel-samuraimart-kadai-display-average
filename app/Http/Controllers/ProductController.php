@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\MajorCategory;
+use App\Models\Rating;
 
 class ProductController extends Controller
 {
@@ -35,6 +36,12 @@ class ProductController extends Controller
             $category = null;
             $major_category = null;
         }
+
+        //  // 平均評価を計算して各商品に追加
+        //  foreach ($products as $product) {
+        //     $averageRating = Rating::where('product_id', $product->id)->avg('rating');
+        //     $product->averageRating = round($averageRating, 1);
+        // }
         $categories = Category::all();
         $major_categories = MajorCategory::all();
 

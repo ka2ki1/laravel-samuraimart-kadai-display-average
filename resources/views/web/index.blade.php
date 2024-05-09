@@ -22,6 +22,7 @@
                     <div class="col-12">
                         <p class="samuraimart-product-label mt-2">
                             {{ $recommend_product->name }}<br>
+                            <span class="samuraimart-star-rating" data-rate="{{$recommend_product->reviews->avg('score')}}"></span> <!-- 平均評価を表示 -->
                             <label>￥{{ $recommend_product->price }}</label>
                         </p>
                     </div>
@@ -46,6 +47,9 @@
                     <div class="col-12">
                         <p class="samuraimart-product-label mt-2">
                             {{ $recently_product->name }}<br>
+                            @if ($recently_product->averageRating !== null)<!-- 平均評価を表示 -->
+                            <span class="samuraimart-star-rating" data-rate="{{$recommend_product->reviews->avg('score')}}"></span> <br><!-- 平均評価を表示 -->
+                            @endif
                             <label>￥{{ $recently_product->price }}</label>
                         </p>
                     </div>
