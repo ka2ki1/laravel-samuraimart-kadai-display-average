@@ -216,3 +216,48 @@ th, td {
     /* width: calc({{ $product->averageRating }} * 20%); 平均評価に応じて星の幅を指定 */
     overflow: hidden; /* 指定した幅よりも大きい部分を非表示にする */
 }
+
+
+.samuraimart-star-rating[data-rate="5"]::after {
+    width: 100%;
+  }
+
+  .samuraimart-star-rating[data-rate="4.5"]::after {
+    width: 90%;
+  }
+
+  .samuraimart-star-rating[data-rate="4"]::after {
+    width: 80%;
+  }
+
+  .samuraimart-star-rating[data-rate="3.5"]::after {
+    width: 70%;
+  }
+
+  .samuraimart-star-rating[data-rate="3"]::after {
+    width: 60%;
+  }
+
+  .samuraimart-star-rating[data-rate="2.5"]::after {
+    width: 50%;
+  }
+
+  .samuraimart-star-rating[data-rate="2"]::after {
+    width: 40%;
+  }
+
+  .samuraimart-star-rating[data-rate="1.5"]::after {
+    width: 30%;
+  }
+
+  .samuraimart-star-rating[data-rate="1"]::after {
+    width: 20%;
+  }
+
+  .samuraimart-star-rating[data-rate="0.5"]::after {
+    width: 10%;
+  }
+
+  .samuraimart-star-rating[data-rate="0"]::after {
+    width: 0%;
+  }
